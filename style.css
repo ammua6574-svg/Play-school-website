@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  background: #fef9f0;
+  color: #333;
+}
+a {
+  text-decoration: none;
+}
+
+header {
+  background: #fff;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  padding: 15px 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-family: 'Fredoka One', cursive;
+  font-size: 28px;
+  color: #ff6b9d;
+}
+.logo span {
+  color: #4ecdc4;
+}
+nav a {
+  margin-left: 30px;
+  font-weight: 600;
+  color: #555;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #ff6b9d;
+}
+.join-btn {
+  background: #ff6b9d;
+  color: #fff !important;
+  padding: 10px 25px;
+  border-radius: 30px;
+}
+.join-btn:hover {
+  background: #e55a8a;
+}
+
+.hero {
+  margin-top: 80px;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50px; left: -50px;
+  width: 200px; height: 200px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 50%;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; right: -80px;
+  width: 300px; height: 300px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+.hero h1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 56px;
+  color: #fff;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+.hero h1 span {
+  color: #ffde59;
+}
+.hero p {
+  font-size: 20px;
+  color: #fff;
+  margin: 20px 0 35px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-btns a {
+  display: inline-block;
+  padding: 14px 40px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+.hero-btns a:hover {
+  transform: translateY(-3px);
+}
+.btn-primary {
+  background: #fff;
+  color: #ff6b9d !important;
+}
+.btn-secondary {
+  background: transparent;
+  color: #fff !important;
+  border: 2px solid #fff;
+}
+
+.floating-toys {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  pointer-events: none;
+}
+.floating-toys span {
+  position: absolute;
+  font-size: 50px;
+  animation: floatUp 8s infinite linear;
+  opacity: 0.4;
+}
+@keyframes floatUp {
+  0% { transform: translateY(100vh) rotate(0deg); opacity: 0.4; }
+  100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+}
+
+section {
+  padding: 80px 0;
+}
+.section-title {
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 15px;
+}
+.section-sub {
+  text-align: center;
+  color: #777;
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.about-image {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+.about-image img {
+  width: 100%;
+  display: block;
+}
+.about-text h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 32px;
+  color: #333;
+}
+.about-text h2 span {
+  color: #4ecdc4;
+}
+.about-text p {
+  color: #666;
+  line-height: 1.8;
+  margin: 20px 0;
+  font-size: 16px;
+}
+.stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+.stat-item {
+  text-align: center;
+}
+.stat-item h3 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 36px;
+  color: #ff6b9d;
+}
+.stat-item p {
+  color: #999;
+  font-size: 14px;
+  margin: 0;
+}
+
+.caretakers-bg {
+  background: #f8f4ef;
+}
+.caretakers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+.caretaker-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 25px;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+  transition: transform 0.3s;
+}
+.caretaker-card:hover {
+  transform: translateY(-8px);
+}
+.caretaker-card .icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.caretaker-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+.caretaker-card p {
+  color: #888;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.gallery {
+  background: #fff;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.join-section {
+  background: linear-gradient(135deg, #4ecdc4, #44b09e);
+  text-align: center;
+}
+.join-section h2 {
+  color: #fff;
+  font-size: 42px;
+}
+.join-section p {
+  color: rgba(255,255,255,0.9);
+  font-size: 18px;
+  max-width: 600px;
+  margin: 15px auto 35px;
+}
+.join-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  gap: 15px;
+}
+.join-form input {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+}
+.join-form button {
+  background: #ff6b9d;
+  color: #fff;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.join-form button:hover {
+  background: #e55a8a;
+}
+#formMsg {
+  color: #fff;
+  margin-top: 20px;
+  display: none;
+}
+
+footer {
+  background: #2d3436;
+  color: #b2bec3;
+  text-align: center;
+  padding: 30px 0;
+}
+.footer-logo {
+  font-family: 'Fredoka One', cursive;
+  font-size: 22px;
+  color: #fff;
+}
+footer .social a {
+  color: #fff;
+  margin: 0 12px;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 36px; }
+  .about-grid { grid-template-columns: 1fr; }
+  .stats { justify-content: center; }
+  .join-form { flex-direction: column; }
+  nav a { margin-left: 15px; font-size: 14px; }
+  .header-inner { flex-direction: column; gap: 10px; }
+}
